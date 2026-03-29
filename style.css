@@ -1,29 +1,29 @@
-/* --- GLOBAL VARIABLES & SETUP --- */
+
 :root {
-    --bg-color: #0f172a; /* Dark slate background */
+    --bg-color: #0f172a;
     --nav-bg: rgba(15, 23, 42, 0.9);
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
-    --accent: #3b82f6; /* Electric Blue */
+    --accent: #3b82f6;
     --accent-hover: #2563eb;
     --card-bg: #1e293b;
 }
 
-/* This creates the smooth scroll effect when clicking navbar links */
+
 html {
     scroll-behavior: smooth; 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;/* --- GLOBAL VARIABLES & SETUP --- */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 :root {
-    --bg-color: #0f172a; /* Dark slate background */
+    --bg-color: #0f172a;
     --nav-bg: rgba(15, 23, 42, 0.9);
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
-    --accent: #3b82f6; /* Electric Blue */
+    --accent: #3b82f6;
     --accent-hover: #2563eb;
     --card-bg: #1e293b;
 }
 
-/* This creates the smooth scroll effect when clicking navbar links */
+
 html {
     scroll-behavior: smooth; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -37,7 +37,7 @@ body {
     line-height: 1.6;
 }
 
-/* --- NAVIGATION BAR --- */
+
 nav {
     position: fixed;
     top: 0;
@@ -79,10 +79,9 @@ nav {
     color: var(--accent);
 }
 
-/* --- SECTIONS LAYOUT --- */
 section {
-    min-height: 100vh; /* Makes each section take up at least full screen height */
-    padding: 100px 50px 50px; /* Top padding ensures content isn't hidden behind fixed navbar */
+    min-height: 100vh;
+    padding: 100px 50px 50px; 
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -99,7 +98,6 @@ h2 {
     padding-bottom: 5px;
 }
 
-/* --- HOME SECTION --- */
 #home {
     flex-direction: row;
     align-items: center;
@@ -134,23 +132,23 @@ h2 {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    overflow: hidden; /* This makes sure the square image stays inside the circle */
-    border: 3px solid var(--accent); /* Gives a nice solid glowing border around your photo */
+    overflow: hidden; 
+    border: 3px solid var(--accent);
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--card-bg);
 }
 
-/* Add this new rule right below it to make the image fit perfectly */
+
 .hero-image-placeholder img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* This centers and zooms the image so it doesn't look stretched */
+    object-fit: cover; 
 }
 
 
-/* --- BUTTONS --- */
+
 .btn {
     display: inline-block;
     background-color: var(--accent);
@@ -179,7 +177,7 @@ h2 {
     background-color: rgba(59, 130, 246, 0.1);
 }
 
-/* --- ABOUT & SERVICES SECTIONS --- */
+
 .skills-grid {
     display: flex;
     gap: 15px;
@@ -224,7 +222,7 @@ h2 {
     font-size: 1.3rem;
 }
 
-/* --- CONTACT SECTION --- */
+
 .contact-container {
     display: flex;
     gap: 50px;
@@ -277,7 +275,7 @@ h2 {
     resize: vertical;
 }
 
-/* --- MOBILE RESPONSIVENESS --- */
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -318,7 +316,7 @@ body {
     line-height: 1.6;
 }
 
-/* --- NAVIGATION BAR --- */
+
 nav {
     position: fixed;
     top: 0;
@@ -360,10 +358,10 @@ nav {
     color: var(--accent);
 }
 
-/* --- SECTIONS LAYOUT --- */
+
 section {
-    min-height: 100vh; /* Makes each section take up at least full screen height */
-    padding: 100px 50px 50px; /* Top padding ensures content isn't hidden behind fixed navbar */
+    min-height: 100vh; 
+    padding: 100px 50px 50px; 
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -380,7 +378,7 @@ h2 {
     padding-bottom: 5px;
 }
 
-/* --- HOME SECTION --- */
+
 #home {
     flex-direction: row;
     align-items: center;
@@ -415,23 +413,23 @@ h2 {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    overflow: hidden; /* This makes sure the square image stays inside the circle */
-    border: 3px solid var(--accent); /* Gives a nice solid glowing border around your photo */
+    overflow: hidden; 
+    border: 3px solid var(--accent); 
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--card-bg);
 }
 
-/* Add this new rule right below it to make the image fit perfectly */
+
 .hero-image-placeholder img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* This centers and zooms the image so it doesn't look stretched */
+    object-fit: cover; 
 }
 
 
-/* --- BUTTONS --- */
+
 .btn {
     display: inline-block;
     background-color: var(--accent);
@@ -460,7 +458,7 @@ h2 {
     background-color: rgba(59, 130, 246, 0.1);
 }
 
-/* --- ABOUT & SERVICES SECTIONS --- */
+
 .skills-grid {
     display: flex;
     gap: 15px;
@@ -505,7 +503,7 @@ h2 {
     font-size: 1.3rem;
 }
 
-/* --- CONTACT SECTION --- */
+
 .contact-container {
     display: flex;
     gap: 50px;
@@ -558,7 +556,7 @@ h2 {
     resize: vertical;
 }
 
-/* --- MOBILE RESPONSIVENESS --- */
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
