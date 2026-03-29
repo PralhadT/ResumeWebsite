@@ -1,15 +1,15 @@
-
+/* --- GLOBAL VARIABLES & SETUP --- */
 :root {
-    --bg-color: #0f172a; 
+    --bg-color: #0f172a; /* Dark slate background */
     --nav-bg: rgba(15, 23, 42, 0.9);
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
-    --accent: #3b82f6;
+    --accent: #3b82f6; /* Electric Blue */
     --accent-hover: #2563eb;
     --card-bg: #1e293b;
 }
 
-
+/* This creates the smooth scroll effect when clicking navbar links */
 html {
     scroll-behavior: smooth; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -23,7 +23,7 @@ body {
     line-height: 1.6;
 }
 
-
+/* --- NAVIGATION BAR --- */
 nav {
     position: fixed;
     top: 0;
@@ -65,10 +65,10 @@ nav {
     color: var(--accent);
 }
 
-
+/* --- SECTIONS LAYOUT --- */
 section {
-    min-height: 100vh; 
-    padding: 100px 50px 50px; 
+    min-height: 100vh; /* Makes each section take up at least full screen height */
+    padding: 100px 50px 50px; /* Top padding ensures content isn't hidden behind fixed navbar */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -85,6 +85,7 @@ h2 {
     padding-bottom: 5px;
 }
 
+/* --- HOME SECTION --- */
 #home {
     flex-direction: row;
     align-items: center;
@@ -115,21 +116,27 @@ h2 {
     margin-bottom: 40px;
 }
 
-/* Styling for the new larger professional circular image */
-.hero-section img.circle-img {
-    width: 320px; /* Make the circle larger to fit more content */
-    height: 320px;
-    border-radius: 50%; /* Perfect circle */
-    object-fit: cover; /* Critically important: fill the space without stretching */
-    
-    /* NEW MAGIC: this ensures your face is centered, but we see the suit */
-    object-position: center 20%; 
-    
-    border: 4px solid #007bff; /* Add a clean blue border (adjust color to your preference) */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a professional shadow */
+.hero-image-placeholder {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden; /* This makes sure the square image stays inside the circle */
+    border: 3px solid var(--accent); /* Gives a nice solid glowing border around your photo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--card-bg);
+}
+
+/* Add this new rule right below it to make the image fit perfectly */
+.hero-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This centers and zooms the image so it doesn't look stretched */
 }
 
 
+/* --- BUTTONS --- */
 .btn {
     display: inline-block;
     background-color: var(--accent);
@@ -158,7 +165,7 @@ h2 {
     background-color: rgba(59, 130, 246, 0.1);
 }
 
-
+/* --- ABOUT & SERVICES SECTIONS --- */
 .skills-grid {
     display: flex;
     gap: 15px;
@@ -203,7 +210,7 @@ h2 {
     font-size: 1.3rem;
 }
 
-
+/* --- CONTACT SECTION --- */
 .contact-container {
     display: flex;
     gap: 50px;
@@ -256,7 +263,7 @@ h2 {
     resize: vertical;
 }
 
-
+/* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
