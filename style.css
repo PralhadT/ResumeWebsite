@@ -115,9 +115,9 @@ h2 {
     margin-bottom: 40px;
 }
 
-.hero-image-placeholder {
-    /* Styling for the new larger professional circular image */
-width: 320px; /* Make the circle larger to fit more content */
+/* Styling for the new larger professional circular image */
+.hero-section img.circle-img {
+    width: 320px; /* Make the circle larger to fit more content */
     height: 320px;
     border-radius: 50%; /* Perfect circle */
     object-fit: cover; /* Critically important: fill the space without stretching */
@@ -126,15 +126,8 @@ width: 320px; /* Make the circle larger to fit more content */
     object-position: center 20%; 
     
     border: 4px solid #007bff; /* Add a clean blue border (adjust color to your preference) */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a professional shadow */
 }
-
-
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-}
-
 
 
 .btn {
