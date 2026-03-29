@@ -31,4 +31,4 @@ As an engineering student and active freelancer, I built this portfolio to provi
 ## 🚀 How to Run Locally
 1. Clone this repository:
    ```bash
-   git clone [https://github.com/yourusername/portfolio.git](https://github.com/yourusername/portfolio.git)
+   git clone [ https://pralhadt.github.io/ResumeWebsite/]( https://pralhadt.github.io/ResumeWebsite/)
