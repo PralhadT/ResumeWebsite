@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pralhad Tathe | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="#home" class="logo">Pralhad.</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="hero-content">
+            <p class="greeting">Hi, I'm Pralhad Tathe.</p>
+            <h1 class="headline">Freelance Web Developer, Data Analyst & AI Specialist</h1>
+            <p class="tagline">I help businesses scale by delivering comprehensive solutions in digital marketing, web and app design, data analytics, and cutting-edge AI services.</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn">My Services</a>
+                <a href="#contact" class="btn btn-outline">Hire Me</a>
+            </div>
+        </div>
+       <div class="hero-image-placeholder">
+    <img src="me5.jpeg" alt="Pralhad Tathe - Freelance Developer">
+</div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>I am an engineering student successfully balancing my academics with a thriving freelance career. I specialize in building digital solutions that solve real-world problems for local businesses and beyond.</p>
+            <p><strong>Experience:</strong> I have independently developed and launched professional websites for healthcare providers (dental clinics) and retail businesses (super shopy markets), ensuring smooth user experiences and better digital visibility.</p>
+            
+            <h3 style="margin-top: 30px;">Core Skills</h3>
+            <div class="skills-grid">
+                <span class="skill-badge">HTML & CSS</span>
+                <span class="skill-badge">Project Management</span>
+                <span class="skill-badge">Artificial Intelligence (AI)</span>
+                <span class="skill-badge">Data Analytics</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>My Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Web & App Design</h3>
+                <p>Creating clean, responsive, and user-friendly interfaces.</p>
+            </div>
+            <div class="service-card">
+                <h3>Digital Marketing</h3>
+                <p>Growing online presence and reaching target audiences effectively.</p>
+            </div>
+            <div class="service-card">
+                <h3>AI Services</h3>
+                <p>Streamlining workflows and integrating smart AI tools.</p>
+            </div>
+            <div class="service-card">
+                <h3>Data Analytics</h3>
+                <p>Turning raw data into actionable insights for better business decisions.</p>
+            </div>
+        </div>
+
+        <h3>Tools & Technologies</h3>
+        <div class="skills-grid">
+            <span class="skill-badge">VS Code</span>
+            <span class="skill-badge">Git & GitHub</span>
+            <span class="skill-badge">n8n & Zapier</span>
+            <span class="skill-badge">Google Colab</span>
+            <span class="skill-badge">SQL & Excel</span>
+            <span class="skill-badge">Power BI</span>
+            <span class="skill-badge">Seaborn & scikit-learn</span>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p>Ready to start your next project or need help scaling your business? Send me a message!</p>
+                <p><strong>Email:</strong> <br><a href="mailto:pralhadtathe007@gmail.com">pralhadtathe007@gmail.com</a></p>
+                <p><strong>Location:</strong> <br>Chh. Sambhajinagar, Maharashtra</p>
+            </div>
+            
+            <div class="contact-form">
+    <div id="success-message" style="display: none; background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 15px; border-radius: 5px; margin-bottom: 20px; border: 1px solid #10b981; font-weight: bold; text-align: center;">
+        Message sent successfully! I will get back to you soon.
+    </div>
+
+    <form id="contactForm" action="https://formsubmit.co/ajax/pralhadtathe007@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New Hire Inquiry from Portfolio!">
+        
+        <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+            <textarea name="message" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" id="submitBtn" class="btn" style="width: 100%;">Send Message</button>
+    </form>
+</div>
+    </section>
+
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const successMessage = document.getElementById('success-message');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Stops the page from refreshing/redirecting
+            
+            // Change button text while sending
+            submitBtn.innerText = 'Sending...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Show success message
+                successMessage.style.display = 'block';
+                // Clear the form
+                form.reset();
+                // Reset button
+                submitBtn.innerText = 'Send Message';
+                submitBtn.disabled = false;
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 5000);
+            })
+            .catch(error => {
+                console.log(error);
+                submitBtn.innerText = 'Error! Try Again.';
+                submitBtn.disabled = false;
+            });
+        });
+    </script>
+</body>
+</html>
