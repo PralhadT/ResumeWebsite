@@ -3,37 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pralhad Tathe | Personal Portfolio</title>
+    <title>Pralhad Tathe | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="home" class="hero-section">
+    <nav>
+        <a href="#home" class="logo">Pralhad.</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
         <div class="hero-content">
-            <h3>Hi, I'm Pralhad Tathe.</h3>
-            <h1>Freelance Web Developer, <br> Data Analyst & AI Specialist</h1>
-            <p>I help businesses scale by delivering comprehensive solutions in digital marketing, web and app design, data analytics, and cutting-edge AI services.</p>
-            <div class="hero-btns">
+            <p class="greeting">Hi, I'm Pralhad Tathe.</p>
+            <h1 class="headline">Freelance Web Developer, Data Analyst & AI Specialist</h1>
+            <p class="tagline">I help businesses scale by delivering comprehensive solutions in digital marketing, web and app design, data analytics, and cutting-edge AI services.</p>
+            <div class="hero-buttons">
                 <a href="#services" class="btn">My Services</a>
                 <a href="#contact" class="btn btn-outline">Hire Me</a>
             </div>
         </div>
-        <img src="Professional-Photo.jpg" alt="Pralhad Tathe Professional Portrait" class="circle-img">
+       <div class="hero-image-placeholder">
+    <img src="me6.jpeg" alt="Pralhad Tathe - Freelance Developer">
+</div>
     </section>
 
-    </body>
-</html>
     <section id="about">
         <h2>About Me</h2>
         <div class="about-content">
@@ -122,7 +121,9 @@
         const successMessage = document.getElementById('success-message');
 
         form.addEventListener('submit', function(e) {
-            e.preventDefault(); 
+            e.preventDefault(); // Stops the page from refreshing/redirecting
+            
+            // Change button text while sending
             submitBtn.innerText = 'Sending...';
             submitBtn.disabled = true;
 
@@ -137,15 +138,15 @@
             })
             .then(response => response.json())
             .then(data => {
-               
+                // Show success message
                 successMessage.style.display = 'block';
-            
+                // Clear the form
                 form.reset();
-           
+                // Reset button
                 submitBtn.innerText = 'Send Message';
                 submitBtn.disabled = false;
                 
-                
+                // Hide success message after 5 seconds
                 setTimeout(() => {
                     successMessage.style.display = 'none';
                 }, 5000);
