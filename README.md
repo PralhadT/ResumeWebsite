@@ -5,7 +5,7 @@ Personal portfolio website showcasing my freelance services in web development, 
 
 A modern, highly responsive single-page portfolio website designed to showcase my freelance work, technical skills, and professional services. 
 
-🌍 **Live Demo:** [Insert your GitHub Pages Link here]
+🌍 **Live Demo:** [ https://pralhadt.github.io/ResumeWebsite/]
 
 ## 🎯 Overview
 As an engineering student and active freelancer, I built this portfolio to provide a centralized hub for clients to view my capabilities in web development, data analytics, and AI solutions. The site features a clean, dark-themed UI with glassmorphism effects and smooth scrolling.
