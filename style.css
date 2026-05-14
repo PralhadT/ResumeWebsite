@@ -1,15 +1,17 @@
+/* --- GLOBAL VARIABLES & SETUP --- */
 :root {
-    --bg-color: #0f172a;
+    --bg-color: #0f172a; /* Dark slate background */
     --nav-bg: rgba(15, 23, 42, 0.9);
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
-    --accent: #3b82f6;
+    --accent: #3b82f6; /* Electric Blue */
     --accent-hover: #2563eb;
     --card-bg: #1e293b;
 }
 
+/* This creates the smooth scroll effect when clicking navbar links */
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -21,6 +23,7 @@ body {
     line-height: 1.6;
 }
 
+/* --- NAVIGATION BAR --- */
 nav {
     position: fixed;
     top: 0;
@@ -62,9 +65,10 @@ nav {
     color: var(--accent);
 }
 
+/* --- SECTIONS LAYOUT --- */
 section {
-    min-height: 100vh;
-    padding: 100px 50px 50px;
+    min-height: 100vh; /* Makes each section take up at least full screen height */
+    padding: 100px 50px 50px; /* Top padding ensures content isn't hidden behind fixed navbar */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -81,8 +85,9 @@ h2 {
     padding-bottom: 5px;
 }
 
+/* --- HOME SECTION --- */
 #home {
-    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
@@ -115,20 +120,23 @@ h2 {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid var(--accent);
+    overflow: hidden; /* This makes sure the square image stays inside the circle */
+    border: 3px solid var(--accent); /* Gives a nice solid glowing border around your photo */
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--card-bg);
 }
 
+/* Add this new rule right below it to make the image fit perfectly */
 .hero-image-placeholder img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* This centers and zooms the image so it doesn't look stretched */
 }
 
+
+/* --- BUTTONS --- */
 .btn {
     display: inline-block;
     background-color: var(--accent);
@@ -148,15 +156,24 @@ h2 {
 }
 
 .btn-outline {
-    background-color: transparent;
-    border: 2px solid var(--accent);
-    margin-left: 15px;
+     display: inline-block;
+    background-color: var(--accent);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-outline:hover {
-    background-color: rgba(59, 130, 246, 0.1);
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
 }
 
+/* --- ABOUT & SERVICES SECTIONS --- */
 .skills-grid {
     display: flex;
     gap: 15px;
@@ -201,14 +218,14 @@ h2 {
     font-size: 1.3rem;
 }
 
+/* --- CONTACT SECTION --- */
 .contact-container {
     display: flex;
     gap: 50px;
     flex-wrap: wrap;
 }
 
-.contact-info,
-.contact-form {
+.contact-info, .contact-form {
     flex: 1;
     min-width: 300px;
 }
@@ -232,8 +249,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-.form-group input,
-.form-group textarea {
+.form-group input, .form-group textarea {
     width: 100%;
     padding: 15px;
     background-color: var(--card-bg);
@@ -245,8 +261,7 @@ h2 {
     font-size: 1rem;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+.form-group input:focus, .form-group textarea:focus {
     outline: none;
     border-color: var(--accent);
 }
@@ -256,163 +271,34 @@ h2 {
     resize: vertical;
 }
 
+/* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
         padding: 15px;
     }
-
     .nav-links {
         margin-top: 15px;
         gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
     }
-
     #home {
         flex-direction: column-reverse;
         text-align: center;
     }
-
     .headline {
         font-size: 2.5rem;
     }
-
     .hero-buttons {
         display: flex;
         flex-direction: column;
         gap: 15px;
     }
-
     .btn-outline {
         margin-left: 0;
     }
-
     section {
         padding: 140px 20px 50px;
     }
-}  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-}
-
-section {
-  padding: 100px 30px;
-  min-height: 100vh;
-}
-
-#home {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.headline {
-  font-size: 2.5rem;
-}
-
-.tagline {
-  color: var(--light-text);
-}
-
-.hero-image-placeholder {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.hero-image-placeholder img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.btn {
-  background: var(--blue);
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.skill-badge {
-  background: var(--card);
-  padding: 8px 15px;
-  border-radius: 20px;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.service-card {
-  background: var(--card);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.contact-container {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-@media (max-width: 768px) {
-  #home {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav {
-    flex-direction: column;
-  }
-}}
-
-section {
-  padding: 100px 20px;
-  min-height: 100vh;
-}
-
-#home {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.btn {
-  background: var(--blue);
-  padding: 10px 15px;
-  border-radius: 5px;
-  color: white;
-}
-
-@media (max-width: 768px) {
-  #home {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav {
-    flex-direction: column;
-  }
 }
