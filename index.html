@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <nav>
+    <!-- <nav>
         <a href="#home" class="logo">Pralhad.</a>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
@@ -16,7 +16,61 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+    </nav> -->
+
+
+
+
+    <nav> 
+         <a href="#home" class="logo">pralT</a>
+         <ul class="nav-links">
+             <li> <a href="#home">home</a></li>
+             <li> <a href="#about">about</a></li>
+             <li><a href="#services">my services</a> </li>
+             <li><a href="#contact">contact us</a></li>
+         </ul>
+
+
+
     </nav>
+
+
+
+<!-- <section id="home">
+ <div class="hero-content">
+
+<p class="greetings" font style="font-size: larger;"> hii, i am pralhad Tathe.</p>
+<h2 class="headline"> freelancer and data anylysis ,<br> AI specialist</h2>
+<p class="tagline"> we help businesses to grow with minimal expenditure and in minimal cost of marketing  </p>
+
+
+ </div>
+
+ </div> -->
+
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <section id="home">
         <div class="hero-content">
@@ -121,8 +175,9 @@
         const successMessage = document.getElementById('success-message');
 
         form.addEventListener('submit', function(e) {
-            e.preventDefault(); 
+            e.preventDefault(); // Stops the page from refreshing/redirecting
             
+            // Change button text while sending
             submitBtn.innerText = 'Sending...';
             submitBtn.disabled = true;
 
@@ -137,15 +192,15 @@
             })
             .then(response => response.json())
             .then(data => {
-               
+                // Show success message
                 successMessage.style.display = 'block';
-               
+                // Clear the form
                 form.reset();
-              
+                // Reset button
                 submitBtn.innerText = 'Send Message';
                 submitBtn.disabled = false;
                 
-                
+                // Hide success message after 5 seconds
                 setTimeout(() => {
                     successMessage.style.display = 'none';
                 }, 5000);
